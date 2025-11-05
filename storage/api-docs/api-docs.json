@@ -1,0 +1,75 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Kafka",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/send": {
+            "post": {
+                "tags": [
+                    "Kafka"
+                ],
+                "summary": "Send Kafka",
+                "operationId": "11f04456bd8624f45f9a77f6d302a49b",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "key",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/test_send": {
+            "get": {
+                "tags": [
+                    "Kafka"
+                ],
+                "summary": "Send Test Kafka",
+                "operationId": "80cf371da2b5e195c1ee55f17c31bd93",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Kafka",
+            "description": "Kafka"
+        }
+    ]
+}
